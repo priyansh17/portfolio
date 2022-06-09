@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div className="App" >
-            <Router>
+            <Router basename="/My-Portfolio">
                 <Routes>
                     <Route path='/' element={<LandingPage />} />
                     <Route path='/projects' element={<ProjectsPage />} />
