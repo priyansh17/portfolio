@@ -12,6 +12,8 @@ const staticData = {
     "discord": "https://discord.gg/H3qrwyf6bP",
     "email": "mailto:im1706@gmail.com",
     "github": "https://github.com/priyansh17?tab=repositories",
+    "ProjectsPageHeading" : "My Projects",
+    
 };
 
 export default staticData;

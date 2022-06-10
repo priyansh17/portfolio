@@ -30,10 +30,10 @@ function Footer(props) {
             .then((res) => setLikes(res.value));
     }
 
-    const ConnectIcons = (icon, url) => {
+    const ConnectIcons = (icon, url, colour) => {
         return (
             <a href={url} target='_blank' rel="noreferrer">
-                <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'white'}} icon={icon} size={'2x'}/>
+                <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke'}} icon={icon} size={'2x'}/>
             </a>
         )
     }
@@ -41,6 +41,7 @@ function Footer(props) {
     const Icons = [faEnvelope, faLinkedin, faTwitter, faGithub, faFacebook, faDiscord, faInstagram, faYoutube];
     const urls = [staticData['email'], staticData['linkedin'], staticData['twitter'], staticData['github'], staticData['facebook'], staticData['discord'],
                     staticData['instagram'], staticData['youtube'] ]
+    const colours = ['red', 'blue' , 'blue', 'white', 'blue', 'blue', 'pink', 'red']
 
     useEffect(() => {
         getLikes();
@@ -55,7 +56,7 @@ function Footer(props) {
                 </Row>
                 <Row className='IconsRow'>
                     {Icons.map((info, index) => {
-                        return ConnectIcons(info,urls[index]);
+                        return ConnectIcons(info,urls[index],colours[index]);
                     })}
                 </Row>
             </div>
