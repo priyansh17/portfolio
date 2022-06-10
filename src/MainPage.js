@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import CoverImage from './media/CoverImage.png';
-import homepage from './homepageData'
+import homepage from './homepageData';
 import HomescreenCard from './HomescreenCard';
 import career from './media/HomeScreenCards/career.png';
 import education from './media/HomeScreenCards/Education.jpg';
