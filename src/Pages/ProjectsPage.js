@@ -21,10 +21,10 @@ function ProjectsPage(props) {
             <Row style={{ alignItems: "center", justifyContent: "center" }}>
                 {ProjectsData.map((val, ind) => {
                     return (
-                        <Col xs={12} md={6} style={{padding : "1rem"}}>
-                            <ProjectsCard key={ind} name={val['projectName']} date={val['projectDate']}
+                        <Col key={ind} xs={12} md={6} style={{padding : "1rem"}}>
+                            <ProjectsCard name={val['projectName']} date={val['projectDate']}
                                 displayChar={val['projectDisplay']} image={images[ind]} desc={parse(val['projectDescription'])}
-                                para1={val['breifDescription1']} para2={val['breifDescription2']} para3={val['breifDescription3']} />
+                                para1={val['breifDescription1']} para2={val['breifDescription2']} para3={val['breifDescription3']} githubUrl={val['githubUrl']} />
                         </Col>
                     );
                 })}

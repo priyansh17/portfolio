@@ -8,6 +8,7 @@ const projects = [
     "breifDescription1":"",
     "breifDescription2":"",
     "breifDescription3":"",
+    "githubUrl":"https://github.com/priyansh17/BrainRelief",
 },
 {
     "projectName":"HealthifyMe Medical Chatbot",
@@ -18,6 +19,7 @@ const projects = [
     "breifDescription1":"",
     "breifDescription2":"",
     "breifDescription3":"",
+    "githubUrl":"",
 },
 {
     "projectName":"PG Life Website",
@@ -28,6 +30,7 @@ const projects = [
     "breifDescription1":"",
     "breifDescription2":"",
     "breifDescription3":"",
+    "githubUrl":"",
 },
 ];
 

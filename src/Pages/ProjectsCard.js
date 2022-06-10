@@ -29,26 +29,32 @@ const ExpandMore = styled((props) => {
 
 function ProjectsCard(props) {
     const [expanded, setExpanded] = React.useState(false);
-    const [expanded2, setExpanded2] = React.useState(null);
-
-    const open = Boolean(expanded2);
-
-    const handleClose = () => {
-        setExpanded2(null);
-    };
+    const [expanded2, setExpanded2] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
 
-    const handleExpandVertIcon = () => {
-        setExpanded2(true);
+    const handleExpandVertIcon = (event) => {
+        setExpanded2(!expanded2);
+        setAnchorEl(event.currentTarget);
     };
 
+    const handleClose = () => {
+        setExpanded2(false);
+        setAnchorEl(null);
+    }
+
     const MoreOptions = [
-        "View code on Github",
-        "Download"
+        "View code on Github"
     ];
+
+    const openUrl = () => {
+       window.open(props.githubUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    const openMenu = Boolean(expanded2);
 
     return (
         <Card>
@@ -59,21 +65,16 @@ function ProjectsCard(props) {
                     </Avatar>
                 }
                 action={
-                    <>
-                        <IconButton aria-label="more" onClick={handleExpandVertIcon} aria-haspopup="true" aria-controls="long-menu">
-                            <MoreVertIcon />
-                        </IconButton>
-                        <Menu expanded2={expanded2} keepMounted onClose={handleClose} open={open}>
-                            {MoreOptions.map((option) => (
-                                <MenuItem
-                                    key={option}
-                                    onClick={handleClose}>
+                    <IconButton aria-label="more" onClick={handleExpandVertIcon} aria-haspopup="true" >
+                        <MoreVertIcon />
+                        <Menu id="moreOptions" anchorEl={anchorEl} onClose={handleClose} open={openMenu}>
+                            {MoreOptions.map((option, index) => (
+                                <MenuItem key={index} onClick={openUrl}>
                                     {option}
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </>
-
+                    </IconButton>
                 }
                 title={props.name}
                 subheader={props.date}
