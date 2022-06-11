@@ -5,13 +5,16 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ProjectsCard from './ProjectsCard';
 import ProjectsData from './ProjectsData';
 import parse from 'html-react-parser';
-import p1image from '../media/dearDiaryProject.jpg';
-import p2image from '../media/chatbotsHealthcare.png';
-import p3image from '../media/pgLife.png';
+import dearDiaryimage from '../media/dearDiaryProject.jpg';
+import chatbotimage from '../media/chatbotsHealthcare.png';
+import pgLifeimage from '../media/pgLife.png';
+import handTrackingimage from '../media/hand-tracking.png';
+import RestaurantAppimage from '../media/restaurant_app.jpg';
+import b2bReact from '../media/b2b react app.png';
 
 function ProjectsPage(props) {
 
-    const images = [p1image,p2image,p3image];
+    const images = [dearDiaryimage, chatbotimage, b2bReact, handTrackingimage, pgLifeimage, RestaurantAppimage];
 
     return (
         <Container>
@@ -24,7 +27,7 @@ function ProjectsPage(props) {
                         <Col key={ind} xs={12} md={6} style={{padding : "1rem"}}>
                             <ProjectsCard name={val['projectName']} date={val['projectDate']}
                                 displayChar={val['projectDisplay']} image={images[ind]} desc={parse(val['projectDescription'])}
-                                para1={val['breifDescription1']} para2={val['breifDescription2']} para3={val['breifDescription3']} githubUrl={val['githubUrl']} />
+                                para1={parse(val['breifDescription1'])} para2={parse(val['breifDescription2'])} para3={parse(val['breifDescription3'])} githubUrl={val['githubUrl']} />
                         </Col>
                     );
                 })}
