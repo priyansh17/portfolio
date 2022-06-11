@@ -19,7 +19,7 @@ function ProjectsPage(props) {
     return (
         <Container>
             <Row style={{ alignItems: "center" }}>
-                <p id='projectHeader'>{staticData["ProjectsPageHeading"]}</p>
+                <p id='pageHeader'>{staticData["ProjectsPageHeading"]}</p>
             </Row>
             <Row style={{ alignItems: "center", justifyContent: "center" }}>
                 {ProjectsData.map((val, ind) => {

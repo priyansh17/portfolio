@@ -11,6 +11,7 @@ const staticData = {
     "email": "mailto:im1706@gmail.com",
     "github": "https://github.com/priyansh17?tab=repositories",
     "ProjectsPageHeading" : "My Projects",
+    "EducationPageHeading" : "My Education",
     
 };
 
