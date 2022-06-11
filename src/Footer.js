@@ -30,9 +30,9 @@ function Footer(props) {
             .then((res) => setLikes(res.value));
     }
 
-    const ConnectIcons = (icon, url, colour) => {
+    const ConnectIcons = (icon, url, colour,index) => {
         return (
-            <a href={url} target='_blank' rel="noreferrer">
+            <a key={index} href={url} target='_blank' rel="noreferrer">
                 <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke'}} icon={icon} size={'2x'}/>
             </a>
         )
@@ -56,7 +56,7 @@ function Footer(props) {
                 </Row>
                 <Row className='IconsRow'>
                     {Icons.map((info, index) => {
-                        return ConnectIcons(info,urls[index],colours[index]);
+                        return ConnectIcons(info,urls[index],colours[index],index);
                     })}
                 </Row>
             </div>

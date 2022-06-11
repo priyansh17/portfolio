@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import CoverImage from './media/CoverImage.png';
 import homepage from './homepageData';
@@ -17,10 +17,31 @@ import Footer from './Footer';
 
 function MainPage(props) {
 
-  // const [show, setShow] = useState(true);
+  const [age, setAge] = useState(" ");
   const ImagesHomeScreen = [projetcs, education, career, achievement, skills, certifications];
 
-  const card = (x, i) => {
+  const getToday = () => {
+    var today = new Date();
+    const birthDate = new Date('6/17/2000');
+    const yearsDiff = parseInt(today.getFullYear() - birthDate.getFullYear());
+    const years = (today.getMonth()>=birthDate.getMonth() && today.getDate()>=birthDate.getDate()) ? yearsDiff : yearsDiff-1;
+    const days = parseInt((today - birthDate) / (1000 * 60 * 60 * 24));
+    const hours = parseInt(Math.abs(today - birthDate) / (1000 * 60 * 60) % 24);
+    const minutes = parseInt(Math.abs(today.getTime() - birthDate.getTime()) / (1000 * 60) % 60);
+    const seconds = parseInt(Math.abs(today.getTime() - birthDate.getTime()) / (1000) % 60);
+    setAge(years+" years, "+days+" days, "+hours+" hours, "+minutes+" mins, "+seconds+" seconds old");
+  }
+
+  setInterval(getToday,1000);
+
+  useEffect(() => {
+    getToday();
+    return () => {
+      //component will unmount
+    }
+  },[]);
+
+  function card(x, i) {
     return (
       <Col xs={12} md={{ span: 4, offset: 0 }} key={i}>
         <HomescreenCard ImageSrc={ImagesHomeScreen[i]} CardTitle={x['title']} CardText={x['text']} Cardbutton={x['buttonText']} linkTo={x['link']} />
@@ -30,9 +51,10 @@ function MainPage(props) {
   return (
     <Container style={{ color: "#ffffff" }}>
       <div>
-        <Row style={{alignItems : "center"}}>
+        <Row style={{ alignItems: "center" }}>
           <Col xs={12} md={9}>
             <p id='nameHeader'>{staticData["name"]}</p>
+            <p>{age}</p>
             <p id='aboutMeMainpage'>{parse(staticData["about"])}</p>
           </Col>
           <Col xs={12} md={3}>
