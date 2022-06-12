@@ -50,7 +50,7 @@ function Footer(props) {
 
     return (
         <Container>
-            <div style={{ marginTop: "2rem", padding: "0rem", marginBottom: "0rem", position: "relative" }}>
+            <div style={{ marginTop: "3rem", padding: "0rem", marginBottom: "0rem", position: "relative" }}>
                 <Row>
                     <p id='contact'>{staticData["contact"]}</p>
                 </Row>

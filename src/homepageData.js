@@ -38,7 +38,7 @@ const homePageData = [
     {
         "imageSrc" : "",
         "title" : "Skills",
-        "text" : "In case you're wondering my capabilities on various platforms here's a growing list of all, whose size is directly propotional to time.",
+        "text" : "In case you're wondering my capabilities on various platforms here's a constantly growing list of all those.",
         "buttonText" : "My Skills",
         "link" : "/skills",
     }
