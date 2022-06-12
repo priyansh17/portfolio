@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import certificates from './CertificatesData';
 import kpmgCertificate from '../media/certificates/KPMG Certificate.pdf';
 import dell1cert from '../media/certificates/Priyansh Choudhary _Dell Internship.pdf';
+import dell2cert from '../media/certificates/Dell Summer Internship Completion Certificate.pdf';
 import hrcCert from '../media/certificates/1805589_Priyansh Choudhary_Certificate_HighRadius.pdf';
 import javaC from '../media/certificates/Core Java Training - Certificate of Completion.pdf';
 import androidC from '../media/certificates/Android App Development Training - Certificate of Completion.pdf';
@@ -30,7 +31,7 @@ function CertificationsPage(props) {
         initialSlide: 0
     };
 
-    const internshipCerts = [dell1cert, dell1cert, hrcCert, kpmgCertificate];
+    const internshipCerts = [dell1cert, dell2cert, hrcCert, kpmgCertificate];
     const trainingCerts = [javaC, androidC, cProgrammingC, webdevC, agileC, commC, timeManagementC];
     const projectCerts = [b2bProj, picProj, androidProj];
 

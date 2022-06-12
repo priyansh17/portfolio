@@ -1,11 +1,11 @@
 const internships = [
     {
         "pdf": "",
-        "name": "Dell Technologies",
+        "name": "Dell Technologies (Summer)",
     },
     {
         "pdf": "",
-        "name": "Dell Technologies",
+        "name": "Dell Technologies (Winter)",
     },
     {
         "pdf": "",
