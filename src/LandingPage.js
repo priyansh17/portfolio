@@ -12,7 +12,7 @@ function LandingPage(props) {
     useEffect(() => {
         setTimeout(() => {
             setLoad(false)
-        }, 2500)
+        }, 4500)
     }, [])
 
 
