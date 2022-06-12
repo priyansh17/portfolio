@@ -1,58 +1,74 @@
 const internships = [
     {
-    "pdf":"",
-    "name":"Dell Technologies",
+        "pdf": "",
+        "name": "Dell Technologies",
     },
     {
-    "pdf":"",
-    "name":"Dell Technologies",
+        "pdf": "",
+        "name": "Dell Technologies",
     },
     {
-    "pdf":"",
-    "name":"HighRadius Technologies",
+        "pdf": "",
+        "name": "HighRadius Technologies",
     },
     {
-    "pdf":"",
-    "name":"KPMG",
+        "pdf": "",
+        "name": "KPMG",
     },
 ];
 
 const trainings = [
     {
-    "pdf":"",
-    "name":"",
+        "pdf": "",
+        "name": "Core JAVA",
     },
     {
-    "pdf":"",
-    "name":"",
+        "pdf": "",
+        "name": "Android Development",
     },
     {
-    "pdf":"",
-    "name":"",
+        "pdf": "",
+        "name": "C & C++",
     },
+    {
+        "pdf": "",
+        "name": "Web Development",
+    },
+    {
+        "pdf": "",
+        "name": "Agile Foundations",
+    },
+    {
+        "pdf": "",
+        "name": "Communications Foundations",
+    },
+    {
+        "pdf": "",
+        "name": "Time Management Foundations",
+    }
 ];
 
 const projects = [
     {
-    "pdf":"",
-    "name":"",
+        "pdf": "",
+        "name": "B2B Full Stack Website",
     },
     {
-    "pdf":"",
-    "name":"",
+        "pdf": "",
+        "name": "Dear Diary : PIC 2020",
     },
     {
-    "pdf":"",
-    "name":"",
-    },
+        "pdf": "",
+        "name": "Android Full Stack Development",
+    }
 ];
 
 
 
-const certificates = [
-    trainings,
-    internships,
-    projects
-];
+const certificates = {
+    "trainings": trainings,
+    "internships": internships,
+    "projects": projects
+};
 
 export default certificates;

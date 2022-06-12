@@ -23,6 +23,13 @@ const homePageData = [
     },
     {
         "imageSrc" : "",
+        "title" : "Certifications",
+        "text" : "In case you feel I am bluffing here, these earned PDFs acts as medium to provide authenticity to all that.",
+        "buttonText" : "My Certifications",
+        "link" : "/certifications",
+    },
+    {
+        "imageSrc" : "",
         "title" : "Achievements",
         "text" : "This section displays all the awards I've earned on my way to here.",
         "buttonText" : "My Award Showcase",
@@ -34,13 +41,6 @@ const homePageData = [
         "text" : "In case you're wondering my capabilities on various platforms here's a growing list of all, whose size is directly propotional to time.",
         "buttonText" : "My Skills",
         "link" : "/skills",
-    },
-    {
-        "imageSrc" : "",
-        "title" : "Certifications",
-        "text" : "In case you feel I am bluffing here, these earned PDFs acts as medium to provide authenticity to all that.",
-        "buttonText" : "My Certifications",
-        "link" : "/certifications",
     }
 ]
 
