@@ -12,6 +12,7 @@ const staticData = {
     "github": "https://github.com/priyansh17?tab=repositories",
     "ProjectsPageHeading" : "My Projects",
     "EducationPageHeading" : "My Education",
+    "CareerPageHeading" : "My Career",
     
 };
 
