@@ -18,7 +18,7 @@ import Footer from './Footer';
 function MainPage(props) {
 
   const [age, setAge] = useState(" ");
-  const ImagesHomeScreen = [projetcs, education, career, certifications, achievement, skills ];
+  const ImagesHomeScreen = [projetcs, education, career, certifications, skills, achievement];
 
   const getToday = () => {
     var today = new Date();

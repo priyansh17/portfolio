@@ -40,7 +40,7 @@ export default function EducationPage(props) {
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent sx={{ margin: 'auto', fontSize: '2rem' }} color="#fff"><br/><br/>
+                <TimelineContent sx={{ margin: 'auto', fontSize: '2rem'}} color="#fff"><br/><br/>
                   <Typography variant='h4' component="span">{val['institution']}</Typography><br />
                   <Typography variant="h5" component="span">{val['qualification']}</Typography><br />
                   <Typography variant="h6" component="span">{val['remarks']}</Typography><br />

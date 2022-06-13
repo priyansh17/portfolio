@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Aclonica';
 
+.slick-dots li button:before {
+    color:White !important;
+}
+
 .ProjectCardImage{
     height: 30vh;
     width: 100%;
@@ -140,7 +144,7 @@
 }
 
 .homescreenCards{
-    height: auto;
+    min-height: 37vh;
     padding: 0;
     margin-top: 5px;
     color: whitesmoke;

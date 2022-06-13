@@ -30,18 +30,19 @@ const homePageData = [
     },
     {
         "imageSrc" : "",
+        "title" : "Skills",
+        "text" : "In case you're wondering my capabilities on various platforms here's a constantly growing list of all those.",
+        "buttonText" : "My Skills",
+        "link" : "/skills",
+    },
+    {
+        "imageSrc" : "",
         "title" : "Achievements",
         "text" : "This section displays all the awards I've earned on my way to here.",
         "buttonText" : "My Award Showcase",
         "link" : "/awards",
     },
-    {
-        "imageSrc" : "",
-        "title" : "Skills",
-        "text" : "In case you're wondering my capabilities on various platforms here's a constantly growing list of all those.",
-        "buttonText" : "My Skills",
-        "link" : "/skills",
-    }
+    
 ]
 
 export default homePageData;

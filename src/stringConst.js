@@ -14,6 +14,7 @@ const staticData = {
     "EducationPageHeading" : "My Education",
     "CareerPageHeading" : "My Career",
     "CertificatesPageHeading" : "My Certificates",
+    "SkillsPageHeading" : "My Skills",
     
 };
 
