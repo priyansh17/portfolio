@@ -12,7 +12,7 @@ function CareerModal(props) {
     return (
         <div>
         <Button onClick={toggleModal} variant="primary" style={{ fontSize: '1.5vh' }}>My Work at {props.corp}</Button>
-        <Modal show={showModal} onHide={toggleModal} size="md" centered>
+        <Modal style={{color: '#000'}} show={showModal} onHide={toggleModal} size="md" centered>
             <Modal.Header closeButton>
                 <Modal.Title>
                     {props.heading}

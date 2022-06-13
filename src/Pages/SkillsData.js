@@ -6,7 +6,7 @@ const skillset = [
     },
     {
         "skill":"C",
-        "rating":"4",
+        "rating":"4.5",
         "type":"Programming Languages"
     },
     {

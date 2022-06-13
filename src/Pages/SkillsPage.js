@@ -7,6 +7,9 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import SkillsData from './SkillsData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -41,6 +44,14 @@ function SkillsPage(props) {
 
     const categories = ["All Skills", "Technical Skills", "Soft Skills", "Programming Languages", "Scripting Languages", "Database Knowledge", "Software Proficiency", "Development"];
 
+    const checkDecimal = (val) => {
+        if (parseFloat(val) % 1 !== 0) {
+            return (
+                <FontAwesomeIcon icon={faStarHalf} />
+            );
+        }
+    }
+
     return (
         <Container>
             <Row>
@@ -56,29 +67,27 @@ function SkillsPage(props) {
                         })}
                     </Tabs>
                 </Box>
-                <TabPanel value={value} index={3}>
-                    <ListGroup>
-                    {
-                        SkillsData.filter(skill => skill.type === categories[3] ).map((val, indexLi) => {
-                            return (
-                                <ListGroupItem key={indexLi}>
-                                    {val['skill']} &nbsp; {val['rating']}
-                                </ListGroupItem>
-                            );
-                        })
-                    }
-                    </ListGroup>
-                </TabPanel>
                 {
                     categories.map((category, cIndex) => {
                         return (
-                            <TabPanel value={value} index={cIndex}>
+                            <TabPanel key={cIndex} value={value} index={cIndex}>
                                 <ListGroup>
                                     {
-                                        SkillsData.filter(skill => skill.type === {category}).map((val, indexLi) => {
+                                        SkillsData.filter(skill => skill.type === category).map((val, indexLi) => {
                                             return (
-                                                <ListGroupItem key={indexLi}>
-                                                    {val['skill']} &nbsp; {val['rating']}
+                                                <ListGroupItem key={indexLi} style={{ margin: '0.5vh', display: 'inline-flex', justifyContent: 'space-between' }}>
+                                                    {val['skill']}
+                                                    <div>
+                                                        {   
+                                                            [...Array(Math.floor(parseInt(val['rating'])))].map((el, i) => {
+                                                                return (
+                                                                    <FontAwesomeIcon icon={faStar} />
+                                                                );
+                                                            })
+                                                        }
+                                                        {checkDecimal(val['rating'])}
+                                                    </div>
+
                                                 </ListGroupItem>
                                             );
                                         })
