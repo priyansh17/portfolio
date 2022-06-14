@@ -29,7 +29,7 @@ function MainPage(props) {
     const hours = parseInt(Math.abs(today - birthDate) / (1000 * 60 * 60) % 24);
     const minutes = parseInt(Math.abs(today.getTime() - birthDate.getTime()) / (1000 * 60) % 60);
     const seconds = parseInt(Math.abs(today.getTime() - birthDate.getTime()) / (1000) % 60);
-    setAge(years+" years, "+days+" days, "+hours+" hours, "+minutes+" mins, "+seconds+" seconds old");
+    setAge(years+" years ("+days+" days, "+hours+" hours, "+minutes+" mins, "+seconds+" seconds) old");
   }
 
   setInterval(getToday,1000);
