@@ -35,14 +35,14 @@ TabPanel.propTypes = {
 function SkillsPage(props) {
 
 
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(2);
 
     const handleChange = (event, newValue) => {
         console.log(newValue);
         setValue(newValue);
     };
 
-    const categories = ["All Skills", "Technical Skills", "Soft Skills", "Programming Languages", "Scripting Languages", "Database Knowledge", "Software Proficiency", "Development"];
+    const categories = ["Technical Skills", "Soft Skills", "Programming Languages", "Scripting Languages", "Database Knowledge", "Development"];
 
     const checkDecimal = (val) => {
         if (parseFloat(val) % 1 !== 0) {
@@ -73,7 +73,7 @@ function SkillsPage(props) {
                             <TabPanel key={cIndex} value={value} index={cIndex}>
                                 <ListGroup>
                                     {
-                                        SkillsData.filter(skill => skill.type === category).map((val, indexLi) => {
+                                        SkillsData.sort((a,b)=> b.rating-a.rating).filter(skill => skill.type === category).map((val, indexLi) => {
                                             return (
                                                 <ListGroupItem key={indexLi} style={{ margin: '0.5vh', display: 'inline-flex', justifyContent: 'space-between' }}>
                                                     {val['skill']}

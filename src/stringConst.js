@@ -15,7 +15,7 @@ const staticData = {
     "CareerPageHeading" : "My Career",
     "CertificatesPageHeading" : "My Certificates",
     "SkillsPageHeading" : "My Skills",
-    
+    "AwardsPageHeading" : "My Awards and Achievements",
 };
 
 export default staticData;
