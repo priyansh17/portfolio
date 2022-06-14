@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import ProjectsPage from './Pages/ProjectsPage';
 import AwardsPage from './Pages/AwardsPage';
@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div className="App" >
-            <Router basename="/My-Portfolio">
+            <Router basename="/">
                 <Routes>
                     <Route path='/' element={<LandingPage />} />
                     <Route path='/projects' element={<ProjectsPage />} />
