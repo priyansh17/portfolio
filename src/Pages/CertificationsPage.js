@@ -16,8 +16,7 @@ import timeManagementC from '../media/certificates/Dell mandatory trainings/Cert
 import androidProj from '../media/certificates/Android App Development Training - Certificate of Excellence.pdf';
 import b2bProj from '../media/certificates/1805589_Priyansh Choudhary_HighRadius_Scores.pdf';
 import picProj from '../media/certificates/PIC EVALUATION.png'
-import CertificateModel from './CertificateSliderModel';
-
+import CertificateSliderModel from './certificateSliderModel';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import PageHeader from './PageHeader';
 
@@ -46,7 +45,7 @@ function CertificationsPage(props) {
                         certificates["trainings"].map((val, ind) => {
                             console.log("model added");
                             return (
-                                <CertificateModel name={val['name']} pdf={trainingCerts[ind]} />
+                                <CertificateSliderModel name={val['name']} pdf={trainingCerts[ind]} />
                             );
                         })}
                 </Slider>
@@ -58,7 +57,7 @@ function CertificationsPage(props) {
                         certificates["internships"].map((val, ind) => {
                             console.log("model added");
                             return (
-                                <CertificateModel name={val['name']} pdf={internshipCerts[ind]} />
+                                <CertificateSliderModel name={val['name']} pdf={internshipCerts[ind]} />
                             );
                         })}
                 </Slider>
@@ -70,7 +69,7 @@ function CertificationsPage(props) {
                         certificates["projects"].map((val, ind) => {
                             console.log("model added");
                             return (
-                                <CertificateModel name={val['name']} pdf={projectCerts[ind]} />
+                                <CertificateSliderModel name={val['name']} pdf={projectCerts[ind]} />
                             );
                         })}
                 </Slider>

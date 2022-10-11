@@ -1,8 +1,9 @@
 import React from 'react';
 import staticData from '../stringConst';
-import { Button, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward, faHome} from '@fortawesome/free-solid-svg-icons';
+import { faBackward} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 // function HeaderIcon({hasIcon, Icon}){
 //     if ({hasIcon}){
 //         return <FontAwesomeIcon style={{ width: 'auto', color: 'whitesmoke' }} icon={Icon} size={'1x'} />
@@ -10,17 +11,19 @@ import { faBackward, faHome} from '@fortawesome/free-solid-svg-icons';
 // }
 function BackHome (props) {
     return (
-        <a style={{position: 'absolute', left: 5}} key={props.index} rel="noreferrer" href={props.url}>
+        <Link to={props.url}>
+        <p style={{position: 'absolute', left: 5}} key={props.index}>
             <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke'}} icon={props.icon} size={'1x'}/>
             <p id="BackHome">&nbsp;Mainpage</p>
-        </a>
+        </p>
+        </Link>
     )
 }
 
 function PageHeader(props) {
     return (
         <Container style={{display: 'flex',flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <BackHome icon={faBackward} index={0} url="/#/mainPage" />
+            <BackHome icon={faBackward} index={0} url="/mainPage" />
             <p id='pageHeader'>{staticData[props.header]}</p>
             {/* <HeaderIcon hasIcon={props.hasIcon} icon={props.icon} />   ToDo */}  
             
