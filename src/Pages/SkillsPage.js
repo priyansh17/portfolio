@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, ListGroup, ListGroupItem } from 'react-bootstrap';
-import staticData from '../stringConst';
+import { Container, ListGroup, ListGroupItem } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -9,6 +8,7 @@ import Box from '@mui/material/Box';
 import SkillsData from './SkillsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import PageHeader from './PageHeader';
 
 
 function TabPanel(props) {
@@ -54,9 +54,7 @@ function SkillsPage(props) {
 
     return (
         <Container>
-            <Row>
-                <p id='pageHeader'>{staticData["SkillsPageHeading"]}</p>
-            </Row>
+            <PageHeader header="SkillsPageHeading"/>
             <Box sx={{ width: '100%' }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs value={value} onChange={handleChange} textColor="inherit" variant="scrollable">

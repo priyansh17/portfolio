@@ -7,13 +7,13 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
-import { Container, Row } from 'react-bootstrap';
-import staticData from '../stringConst';
+import { Container } from 'react-bootstrap';
 import '../App.css';
 import EducationStats from './educationData';
 import las from '../media/lasLogo.png';
 import fiitjee from '../media/fiitjeeVizag.png';
 import kiit from '../media/KiitLogo.png';
+import PageHeader from './PageHeader';
 
 export default function EducationPage(props) {
 
@@ -21,9 +21,8 @@ export default function EducationPage(props) {
 
   return (
     <Container>
-      <Row>
-        <p id='pageHeader'>{staticData["EducationPageHeading"]}</p>
-      </Row>
+    <PageHeader header="EducationPageHeading"/>
+
       <Timeline position="alternate" style={{margin: '0'}}>
         {
           EducationStats.map((val, ind) => {

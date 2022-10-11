@@ -1,7 +1,7 @@
 import React from 'react';
-import staticData from '../stringConst';
-import { Container, Row, Accordion } from 'react-bootstrap';
+import { Container,Row, Accordion } from 'react-bootstrap';
 import AwardsData from './AwardsData';
+import PageHeader from './PageHeader';
 
 function AwardsPage(props) {
 
@@ -9,9 +9,8 @@ function AwardsPage(props) {
 
     return (
         <Container>
-            <Row>
-                <p id='pageHeader'>{staticData["AwardsPageHeading"]}</p>
-            </Row>
+        <PageHeader header="AwardsPageHeading"/>
+           
             <Row>
                 <Accordion defaultActiveKey={keys} alwaysOpen style={{ color: '#000' }}>
                     {

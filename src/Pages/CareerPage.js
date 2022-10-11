@@ -7,14 +7,14 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
-import { Container, Row } from 'react-bootstrap';
-import staticData from '../stringConst';
+import { Container } from 'react-bootstrap';
 import '../App.css';
 import CareerStats from './CareerData';
 import dellLogo from '../media/dell.png';
 import hrcLogo from '../media/hrc.png';
 import kpmgLogo from '../media/kpmg.png';
 import WorkModal from './careerModal';
+import PageHeader from './PageHeader';
 
 
 function CareerPage(props) {
@@ -24,9 +24,8 @@ function CareerPage(props) {
 
     return (
         <Container>
-            <Row>
-                <p id='pageHeader'>{staticData["CareerPageHeading"]}</p>
-            </Row>
+        <PageHeader header="CareerPageHeading"/>
+            
             <Timeline position="alternate" style={{ margin: '0' }}>
                 {
                     CareerStats.map((val, ind) => {

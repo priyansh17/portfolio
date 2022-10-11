@@ -5,9 +5,9 @@ import { Container } from 'react-bootstrap';
 import bgVideo2 from './media/bgIntro.mp4'
 import Pacman from './Pacman';
 
-function LandingPage(props) {
+function LandingPage({Load}) {
 
-    const [load, setLoad] = useState(true);
+    const [load, setLoad] = useState(Load);
 
     useEffect(() => {
         setTimeout(() => {

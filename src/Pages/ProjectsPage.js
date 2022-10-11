@@ -1,6 +1,6 @@
 import '../App.css';
 import React from 'react';
-import staticData from '../stringConst';
+
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectsCard from './ProjectsCard';
 import ProjectsData from './ProjectsData';
@@ -11,6 +11,7 @@ import pgLifeimage from '../media/pgLife.png';
 import handTrackingimage from '../media/hand-tracking.png';
 import RestaurantAppimage from '../media/restaurant_app.jpg';
 import b2bReact from '../media/b2b react app.png';
+import PageHeader from './PageHeader';
 
 function ProjectsPage(props) {
 
@@ -18,9 +19,7 @@ function ProjectsPage(props) {
 
     return (
         <Container>
-            <Row style={{ alignItems: "center" }}>
-                <p id='pageHeader'>{staticData["ProjectsPageHeading"]}</p>
-            </Row>
+            <PageHeader header="ProjectsPageHeading"/>
             <Row style={{ alignItems: "center", justifyContent: "center" }}>
                 {ProjectsData.map((val, ind) => {
                     return (

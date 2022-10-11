@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import staticData from '../stringConst';
 import Slider from "react-slick";
 import certificates from './CertificatesData';
 import kpmgCertificate from '../media/certificates/KPMG Certificate.pdf';
@@ -18,8 +17,10 @@ import androidProj from '../media/certificates/Android App Development Training 
 import b2bProj from '../media/certificates/1805589_Priyansh Choudhary_HighRadius_Scores.pdf';
 import picProj from '../media/certificates/PIC EVALUATION.png'
 import CertificateModel from './CertificateSliderModel';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import PageHeader from './PageHeader';
+
 
 function CertificationsPage(props) {
 
@@ -37,12 +38,7 @@ function CertificationsPage(props) {
 
     return (
         <Container>
-            <Row style={{ alignItems: "center" }}>
-                <p id='pageHeader'>
-                    {staticData["CertificatesPageHeading"]} &nbsp;
-                    <FontAwesomeIcon style={{ width: 'auto', color: 'whitesmoke' }} icon={faFilePdf} size={'1x'} />
-                </p>
-            </Row>
+            <PageHeader header="CertificatesPageHeading" icon={faFilePdf} hasIcon={true}/>
             <Row style={{ paddingTop: "5vh", paddingBottom: "3vh" }}>
                 <p id='CertificateHeader'>Trainings</p>
                 <Slider slidesToShow={3} {...settings}>
