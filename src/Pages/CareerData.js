@@ -1,5 +1,12 @@
 const CareerStats = [
     {
+        "corp":"Cloudera Inc.",
+        "time":"August 2022 - Present",
+        "workDone":"• Developed a platform to automate computing cloud platform (Azure, AWS, GCP) costs and minimise wastage of resources. ",
+        "location":"Bengaluru, India",
+        "postiion":"Software Engineer - 1"
+    },
+    {
         "corp":"Dell Technologies",
         "time":"February 2022 - June 2022",
         "workDone":"• Working on automated generation of pdf reports from excel sheets for millions of users using Python and Tkinter. <br/>• Working on Dell E-Mail Filter system using Microsoft's Graph API to help users manage outlook emails.",

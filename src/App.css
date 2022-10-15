@@ -10,6 +10,15 @@ a:link, a:visited,  a:hover, a:active
     text-decoration: none;
 }
 
+.navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-toggler{
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.dropdown a:link,.dropdown a:visited,.dropdown a:hover,.dropdown a:active {
+    color: black;
+}
+
 .ProjectCardImage{
     height: 30vh;
     width: 100%;
@@ -94,7 +103,6 @@ a:link, a:visited,  a:hover, a:active
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
 }
 
 .spans {
@@ -106,6 +114,7 @@ a:link, a:visited,  a:hover, a:active
 
 .mainPage{
     position: relative;
+    background-attachment: fixed;
 }
 
 .welcomeText {
@@ -138,7 +147,7 @@ a:link, a:visited,  a:hover, a:active
 .App {
     text-align: center;
     width: auto;
-    background-color: #282c34;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
     color: #FFFFFF;
     min-height: 100vh;
 }

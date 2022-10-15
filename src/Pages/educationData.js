@@ -1,10 +1,10 @@
 const EducationStats = [
     {
-        "institution":"Little Angels School",
-        "place":"Visakhapatnam",
-        "time":"May 2016",
-        "remarks":"10 CGPA",
-        "qualification":"Secondary School",
+        "institution":"Kalinga Institute Of Industrial Technology (KIIT)",
+        "place":"Bhubaneshwar",
+        "time":"May 2018 - May 2022",
+        "remarks":"9.46 CGPA",
+        "qualification":"B.TECH in CSE",
     },
     {
         "institution":"FIITJEE Junior College",
@@ -14,12 +14,13 @@ const EducationStats = [
         "qualification":"Higher Secondary School",
     },
     {
-        "institution":"Kalinga Institute Of Industrial Technology (KIIT)",
-        "place":"Bhubaneshwar",
-        "time":"May 2018 - May 2022",
-        "remarks":"9.46 CGPA",
-        "qualification":"B.TECH in CSE",
+        "institution":"Little Angels School",
+        "place":"Visakhapatnam",
+        "time":"May 2016",
+        "remarks":"10 CGPA",
+        "qualification":"Secondary School",
     }
+    
 ]
 
 export default EducationStats;

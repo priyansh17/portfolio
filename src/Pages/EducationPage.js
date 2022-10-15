@@ -17,7 +17,7 @@ import PageHeader from './PageHeader';
 
 export default function EducationPage(props) {
 
-  const images = [las, fiitjee, kiit];
+  const images = [ kiit,fiitjee,las ];
 
   return (
     <Container>

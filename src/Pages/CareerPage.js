@@ -15,11 +15,11 @@ import hrcLogo from '../media/hrc.png';
 import kpmgLogo from '../media/kpmg.png';
 import WorkModal from './careerModal';
 import PageHeader from './PageHeader';
-
+import clouderaLogo from '../media/cloudera.png'
 
 function CareerPage(props) {
 
-    const images = [dellLogo, dellLogo, hrcLogo, kpmgLogo];
+    const images = [clouderaLogo,dellLogo, dellLogo, hrcLogo, kpmgLogo];
     
 
     return (
