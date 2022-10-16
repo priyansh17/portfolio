@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import staticData from './stringConst';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComputer, faHeartbeat, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faComputer, faHeartbeat, faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faGithub, faFacebook, faLinkedin, faDiscord, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import myResume from './media/certificates/Resume_PriyanshChoudhary.pdf'
 
 function Footer(props) {
 
@@ -30,18 +31,18 @@ function Footer(props) {
             .then((res) => setLikes(res.value));
     }
 
-    const ConnectIcons = (icon, url, colour,index) => {
+    const ConnectIcons = (icon, url, colour, index) => {
         return (
             <a key={index} href={url} target='_blank' rel="noreferrer">
-                <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke'}} icon={icon} size={'2x'}/>
+                <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke' }} icon={icon} size={'2x'} />
             </a>
         )
     }
 
     const Icons = [faEnvelope, faLinkedin, faTwitter, faGithub, faFacebook, faDiscord, faInstagram, faYoutube];
     const urls = [staticData['email'], staticData['linkedin'], staticData['twitter'], staticData['github'], staticData['facebook'], staticData['discord'],
-                    staticData['instagram'], staticData['youtube'] ]
-    const colours = ['red', 'blue' , 'blue', 'white', 'blue', 'blue', 'pink', 'red']
+    staticData['instagram'], staticData['youtube']]
+    const colours = ['red', 'blue', 'blue', 'white', 'blue', 'blue', 'pink', 'red']
 
     useEffect(() => {
         getLikes();
@@ -56,10 +57,15 @@ function Footer(props) {
                 </Row>
                 <Row className='IconsRow'>
                     {Icons.map((info, index) => {
-                        return ConnectIcons(info,urls[index],colours[index],index);
+                        return ConnectIcons(info, urls[index], colours[index], index);
                     })}
                 </Row>
             </div>
+            <br />
+            <Row style={{ justifyContent: 'center' }}>
+                <a href={myResume} download='PriyanshChoudhary_Resume.pdf' style={{ width: 'auto' }}><FontAwesomeIcon icon={faDownload} size={'2x'}  border /></a>
+                <p id='resume' style={{ width: 'auto' }}>Download My Resume</p>
+            </Row>
             <br />
             <Row>
                 <Col xs={6}>
