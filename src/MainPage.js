@@ -24,7 +24,7 @@ function MainPage(props) {
     var today = new Date();
     const birthDate = new Date('2000-06-17T21:30:00');
     const yearsDiff = parseInt(today.getFullYear() - birthDate.getFullYear());
-    const years = (today.getMonth()>birthDate.getMonth() || (today.getMonth()==birthDate.getMonth() && today.getDate()>birthDate.getDate()))
+    const years = (today.getMonth()>birthDate.getMonth() || (today.getMonth()===birthDate.getMonth() && today.getDate()>birthDate.getDate()))
       ? yearsDiff : yearsDiff - 1;
     const days = parseInt((today - birthDate) / (1000 * 60 * 60 * 24));
     const hours = parseInt(Math.abs(today - birthDate) / (1000 * 60 * 60) % 24);
