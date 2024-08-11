@@ -6,7 +6,7 @@ const staticData = {
     "linkedin" : "https://www.linkedin.com/in/priyansh-choudhary-33815161/",
     "facebook": "https://www.facebook.com/profile.php?id=100009003452429",
     "youtube": "https://www.youtube.com/c/NotPriyansh",
-    "instagram": "https://www.instagram.com/iamnotpriyansh_/",
+    "instagram": "https://www.instagram.com/priyansh.bin/",
     "discord": "https://discord.gg/H3qrwyf6bP",
     "email": "mailto:im1706@gmail.com",
     "github": "https://github.com/priyansh17?tab=repositories",
