@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import CoverImage from './media/CoverImage.png';
+import myImage from './media/myImage.png';
 import homepage from './homepageData';
 import HomescreenCard from './HomescreenCard';
 import career from './media/HomeScreenCards/career.png';
@@ -59,7 +59,7 @@ function MainPage(props) {
             <p id='aboutMeMainpage'>{parse(staticData["about"])}</p>
           </Col>
           <Col xs={12} md={3}>
-            <img className='coverImage' src={CoverImage} alt="CoverImage" />
+            <img className='myImage' src={myImage} alt="myImage" />
           </Col>
         </Row>
       </div>
