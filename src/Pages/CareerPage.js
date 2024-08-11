@@ -15,11 +15,12 @@ import hrcLogo from '../media/hrc.png';
 import kpmgLogo from '../media/kpmg.png';
 import WorkModal from './careerModal';
 import PageHeader from './PageHeader';
-import clouderaLogo from '../media/cloudera.png'
+import clouderaLogo from '../media/cloudera.png';
+import microsoftLogo from '../media/microsoft.png';
 
 function CareerPage(props) {
 
-    const images = [clouderaLogo,clouderaLogo,dellLogo, dellLogo, hrcLogo, kpmgLogo];
+    const images = [microsoftLogo,clouderaLogo,clouderaLogo,dellLogo, dellLogo, hrcLogo, kpmgLogo];
     
 
     return (

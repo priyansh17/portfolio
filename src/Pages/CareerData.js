@@ -1,5 +1,12 @@
 const CareerStats = [
     {
+        "corp":"Microsoft",
+        "time":"Aug 2024 - Present",
+        "workDone":`•Work In Progress`,
+        "location":"Bengaluru, India",
+        "postiion":"L60 - Software Engineer"
+    },
+    {
         "corp":"Cloudera Inc.",
         "time":"Jan 2024 - July 2024",
         "workDone":`• Led development and planning efforts to implement a resource provisioning system via ansible and django. <br/>• Streamlined resource allocation processes, ensuring efficient utilization and adherence to allocated quotas.
