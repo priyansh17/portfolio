@@ -1,5 +1,15 @@
 const awardData = [
     {
+        "award":"Code Award @ Cloudera",
+        "desc":"Received recognition for my work as SDE-2 in Q2 2024 for a resource provisioning system via ansible and django.",
+        "time":"June 2024",
+    },
+    {
+        "award":"Code Award @ Cloudera",
+        "desc":"Received recognition for my work as SDE-1 in Q2 2023 for developing Cloud Cost tracking and management application.",
+        "time":"April 2023",
+    },
+    {
         "award":"Bravo Award @ Dell Technologies",
         "desc":"Received recognition for my work during Email Retetntion Program while I interned for Dell Technolgies.",
         "time":"May 2022",
