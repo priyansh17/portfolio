@@ -20,6 +20,11 @@ const skillset = [
         "type":"Technical Skills"
     },
     {
+        "skill":"GoLang",
+        "rating":"4",
+        "type":"Technical Skills"
+    },
+    {
         "skill":"Python",
         "rating":"3.5",
         "type":"Technical Skills"
@@ -76,12 +81,12 @@ const skillset = [
     },
     {
         "skill":"AWS",
-        "rating":"1.5",
+        "rating":"3.5",
         "type":"Technical Skills"
     },
     {
         "skill":"Azure",
-        "rating":"2",
+        "rating":"3.5",
         "type":"Technical Skills"
     },
     {
@@ -160,6 +165,11 @@ const skillset = [
         "type":"Programming Languages"
     },
     {
+        "skill":"GoLang",
+        "rating":"4",
+        "type":"Programming Languages"
+    },
+    {
         "skill":"C++",
         "rating":"4.5",
         "type":"Programming Languages"
@@ -215,28 +225,8 @@ const skillset = [
         "type":"Database Knowledge"
     },
     {
-        "skill":"NoSQL",
-        "rating":"1",
-        "type":"Database Knowledge"
-    },
-    {
-        "skill":"DBMS Theory",
-        "rating":"3",
-        "type":"Database Knowledge"
-    },
-    {
-        "skill":"Google Firebase",
-        "rating":"2",
-        "type":"Database Knowledge"
-    },
-    {
-        "skill":"AWS",
-        "rating":"1.5",
-        "type":"Database Knowledge"
-    },
-    {
-        "skill":"Azure",
-        "rating":"2",
+        "skill":"PostgreSql",
+        "rating":"4.5",
         "type":"Database Knowledge"
     },
     {
