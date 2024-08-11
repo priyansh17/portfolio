@@ -16,7 +16,7 @@ function LandingPage(props) {
         }, 4500)
     }, [])
 
-    window.history.replaceState(null, "Homepage", "/My-Portfolio/")
+    window.history.replaceState(null, "Homepage", "/portfolio/")
 
 
     return (<div>
