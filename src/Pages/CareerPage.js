@@ -19,7 +19,7 @@ import clouderaLogo from '../media/cloudera.png'
 
 function CareerPage(props) {
 
-    const images = [clouderaLogo,dellLogo, dellLogo, hrcLogo, kpmgLogo];
+    const images = [clouderaLogo,clouderaLogo,dellLogo, dellLogo, hrcLogo, kpmgLogo];
     
 
     return (
