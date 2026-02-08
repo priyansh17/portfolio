@@ -5,7 +5,7 @@ import { Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faGithub, faFacebook, faLinkedin, faDiscord, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import myResume from './media/certificates/PriyanshChoudhary_Resume_2024.pdf';
+import myResume from './media/certificates/PriyanshChoudhary_Resume_2602.pdf';
 
 function Footer(props) {
  
