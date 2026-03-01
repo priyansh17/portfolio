@@ -1,12 +1,4 @@
-import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import '../App.css';
 import EducationStats from './educationData';
@@ -16,39 +8,35 @@ import kiit from '../media/KiitLogo.png';
 import PageHeader from './PageHeader';
 
 export default function EducationPage(props) {
+    const images = [kiit, fiitjee, las];
 
-  const images = [ kiit,fiitjee,las ];
-
-  return (
-    <Container>
-    <PageHeader header="EducationPageHeading"/>
-
-      <Timeline position="alternate" className='careerTimeline' style={{margin: '0'}}>
-        {
-          EducationStats.map((val, ind) => {
-            return (
-              <TimelineItem key={ind}>
-                <TimelineOppositeContent sx={{ margin: 'auto' }}>
-                  <Typography component="span">{val['place']} {val['time']}</Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineConnector />
-                  <TimelineDot>
-                    {/* <SchoolSharpIcon color='primary' sx={{ fontSize: '8rem' }} /> */}
-                    <img src={images[ind]} alt='institution icon' className='timelineIcon'/>
-                  </TimelineDot>
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ margin: 'auto', fontSize: '2rem'}} color="#fff"><br/><br/>
-                  <Typography variant='h4' component="span">{val['institution']}</Typography><br />
-                  <Typography variant="h5" component="span">{val['qualification']}</Typography><br />
-                  <Typography variant="h6" component="span">{val['remarks']}</Typography><br />
-                </TimelineContent>
-              </TimelineItem>
-            )
-          })
-        }
-      </Timeline>
-    </Container>
-  );
+    return (
+        <Container>
+            <PageHeader header="EducationPageHeading" />
+            <div className="timeline-cards">
+                {EducationStats.map((val, ind) => (
+                    <React.Fragment key={ind}>
+                        <div className="timeline-card">
+                            <div className="timeline-card-header">
+                                <img src={images[ind]} alt={val.institution} className="timelineIcon" />
+                                <div className="timeline-card-title">
+                                    <h4 className="tc-name">{val.institution}</h4>
+                                    <h6 className="tc-role">{val.qualification}</h6>
+                                </div>
+                            </div>
+                            <div className="timeline-card-meta">
+                                <span className="tc-meta-item">{val.time}</span>
+                                <span className="tc-meta-sep">•</span>
+                                <span className="tc-meta-item">{val.place}</span>
+                                <span className="tc-meta-sep">•</span>
+                                <span className="tc-meta-item tc-remarks">{val.remarks}</span>
+                            </div>
+                        </div>
+                        {ind < EducationStats.length - 1 && <hr className="timeline-divider" />}
+                    </React.Fragment>
+                ))}
+            </div>
+        </Container>
+    );
 }
+

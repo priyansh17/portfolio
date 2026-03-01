@@ -1,5 +1,10 @@
 const awardData = [
     {
+        "award":"Azure Core Culture Award @ Microsoft",
+        "desc":"Received the Azure Core Culture Award in recognition of opening up Cross-region AKS backup & restore support to GA and delivering cross-stack impact across backend infra, CLI, and Azure SDK integration.",
+        "time":"2025",
+    },
+    {
         "award":"Code Award @ Cloudera",
         "desc":"Received recognition for my work as SDE-2 in Q2 2024 for a resource provisioning system via ansible and django.",
         "time":"June 2024",

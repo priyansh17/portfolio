@@ -9,9 +9,9 @@ const orbs = [
   { size: 220, top: '5%',  left: '65%', delay: '-7s',  duration: '11s', color: 'rgba(167,139,250,0.16)' },
 ];
 
-export default function ThreeBackground() {
+export default function ThreeBackground({ fixed }) {
   return (
-    <div className='threebg-wrapper' aria-hidden='true'>
+    <div className={`threebg-wrapper${fixed ? ' threebg-fixed' : ''}`} aria-hidden='true'>
       {orbs.map((orb, i) => (
         <div
           key={i}
@@ -30,3 +30,4 @@ export default function ThreeBackground() {
     </div>
   );
 }
+

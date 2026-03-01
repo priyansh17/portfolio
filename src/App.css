@@ -2,137 +2,22 @@
 
 /* ─── Global link styles ─────────────────────────────────────────────────── */
 .slick-dots li button:before {
-    color:White !important;
+    color: White !important;
 }
 
-a:link, a:visited,  a:hover, a:active
-{
+a:link, a:visited, a:hover, a:active {
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-toggler{
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-}
-
-.dropdown a:link,.dropdown a:visited,.dropdown a:hover,.dropdown a:active {
-    color: black;
-}
-
-/* ─── Project cards ──────────────────────────────────────────────────────── */
-.ProjectCardImage{
-    height: 30vh;
-    width: 100%;
-}
-
-/* ─── Typography helpers ─────────────────────────────────────────────────── */
-#certificateText{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: large;
-    font-weight: bold;
-    font-style: normal;
-    margin-top: 1vh;
-    border-radius: 10%;
-}
-
-.IconsRow{
-    width: auto;
-    display: inline-flex; 
-    justify-content:  center;
-    align-items:  center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.IconsRow>*{
-    width: auto;
-}
-
-#pageHeader{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: xx-large;
-    font-weight: bold;
-    font-style: normal;
-    margin-top: 2vh;
-    border-radius: 10%;
-}
-
-#CertificateHeader{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: x-large;
-    font-weight: bold;
-    font-style: normal;
-    justify-content: left;
-    display: inline-flex;
-}
-
-#BackHome{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: medium;
-    font-weight: bold;
-    font-style: normal;
-    justify-content: left;
-    display: inline-flex;
-}
-
-#nameHeader{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: xx-large;
-    font-weight: bold;
-    font-style: normal;
-    margin: 0%;
-    border-radius: 10%;
-}
-
-#contact{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: x-large;
-    font-weight: bold;
-    width: 100%;
-}
-
-#resume{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: x-large;
-    font-weight: bold;
-}
-
-/* ─── Profile image ──────────────────────────────────────────────────────── */
-.myImage{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 40px rgba(99,102,241,0.5);
-    transition: box-shadow 0.3s ease;
-    max-width: 100%;
-}
-
-.myImage:hover {
-    box-shadow: 0 0 60px rgba(139,92,246,0.7);
-}
-
-/* ─── Landing / 3D wrapper ───────────────────────────────────────────────── */
-.landingWrapper {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg, #0f0c29 0%, #1a1a3e 50%, #0d1b3e 100%);
-}
-
-.mainPage{
-    position: relative;
-    background-attachment: fixed;
 }
 
 /* ─── App shell ──────────────────────────────────────────────────────────── */
 .App {
     text-align: center;
     width: auto;
-    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+    background: transparent !important;
     color: #FFFFFF;
     min-height: 100vh;
+    position: relative;
 }
 
 .App-logo {
@@ -144,65 +29,260 @@ a:link, a:visited,  a:hover, a:active
     color: #61dafb;
 }
 
+/* ─── Sticky Navbar ──────────────────────────────────────────────────────── */
+.site-navbar {
+    background: rgba(15, 12, 41, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+    z-index: 100;
+}
+
+.site-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem !important;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.site-navbar .nav-link:hover {
+    color: #fff !important;
+    background: rgba(99, 102, 241, 0.3);
+}
+
+.navbar-brand-name {
+    color: #a78bfa !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(167, 139, 250, 0.5);
+}
+
+/* ─── Project cards ──────────────────────────────────────────────────────── */
+.ProjectCardImage {
+    height: 30vh;
+    width: 100%;
+}
+
+/* ─── Typography helpers ─────────────────────────────────────────────────── */
+#certificateText {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 1vh;
+}
+
+.IconsRow {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.IconsRow > * {
+    width: auto;
+}
+
+#pageHeader {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+#CertificateHeader {
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: left;
+    display: inline-flex;
+}
+
+#nameHeader {
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0;
+}
+
+#contact {
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+}
+
+#resume {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* ─── Profile image ──────────────────────────────────────────────────────── */
+.myImage {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+    transition: box-shadow 0.3s ease;
+    max-width: 100%;
+}
+
+.myImage:hover {
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.7);
+}
+
 /* ─── Homescreen cards ───────────────────────────────────────────────────── */
-.homescreenCards{
+.homescreenCards {
     min-height: 37vh;
     padding: 0;
     margin-top: 5px;
     color: whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid rgba(99,102,241,0.3) !important;
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
 }
 
 .homescreenCards:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(99,102,241,0.35) !important;
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.35) !important;
 }
 
-.homescreenImages{
+.homescreenImages {
     height: 20vh;
     padding: 0;
     object-fit: cover;
 }
 
-/* ─── Timeline icons — responsive ───────────────────────────────────────── */
+/* ─── Timeline icon ──────────────────────────────────────────────────────── */
 .timelineIcon {
-    height: 5rem;
-    width: 5rem;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
-/* ─── Career / Education timeline — force single column on mobile ────────── */
+/* ─── Timeline card layout ───────────────────────────────────────────────── */
+.timeline-cards {
+    padding: 1rem 0 2rem;
+}
+
+.timeline-card {
+    padding: 1.25rem 1rem;
+    position: relative;
+}
+
+.timeline-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-card-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.tc-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.15rem;
+    color: #e0e0ff;
+    line-height: 1.2;
+}
+
+.tc-role {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+    color: #a78bfa;
+}
+
+.tc-remarks {
+    color: #6ee7b7;
+    font-weight: 600;
+}
+
+.timeline-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+}
+
+.tc-meta-sep {
+    color: rgba(99, 102, 241, 0.6);
+}
+
+.timeline-card-action {
+    padding-left: 0.25rem;
+}
+
+.timeline-divider {
+    border: none;
+    border-top: 1px solid rgba(99, 102, 241, 0.3);
+    margin: 0 0.5rem;
+}
+
+/* ─── Skill balls arena ──────────────────────────────────────────────────── */
+.skills-arena {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    justify-content: center;
+    padding: 2rem 0 3rem;
+    align-items: center;
+}
+
+.skill-ball {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: skillFloat linear infinite;
+    will-change: transform;
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.5rem;
+}
+
+.skill-ball:hover {
+    transform: scale(1.18) !important;
+    animation-play-state: paused;
+}
+
+.skill-label {
+    color: #fff;
+    font-size: clamp(0.55rem, 2vw, 0.72rem);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.25;
+    word-break: break-word;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    padding: 0 4px;
+}
+
+@keyframes skillFloat {
+    0%   { transform: translateY(0px);   }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px);   }
+}
+
+/* ─── MUI overrides ──────────────────────────────────────────────────────── */
+.css-1dq0xfy, .css-d6y1d0 {
+    margin-right: 2rem;
+}
+
+/* ─── Mobile responsive ──────────────────────────────────────────────────── */
 @media (max-width: 600px) {
-    .careerTimeline {
-        padding: 0 !important;
-    }
-
-    /* Make all timeline items left-aligned on small screens */
-    .careerTimeline .MuiTimelineItem-root {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
-
-    .careerTimeline .MuiTimelineOppositeContent-root {
-        flex: none !important;
-        width: 100% !important;
-        text-align: left !important;
-        padding: 0 0 0.5rem 1rem !important;
-    }
-
-    .careerTimeline .MuiTimelineContent-root {
-        padding: 0 0 1rem 1rem !important;
-        font-size: 1rem !important;
-    }
-
-    .timelineIcon {
-        height: 3rem;
-        width: 3rem;
-    }
-
     .myImage {
         width: 10rem;
         height: 10rem;
@@ -218,16 +298,26 @@ a:link, a:visited,  a:hover, a:active
     #aboutMeMainpage {
         text-align: center;
     }
-}
 
-/* ─── MUI Tabs color override ────────────────────────────────────────────── */
-.css-1dq0xfy, .css-d6y1d0 {
-    margin-right: 2rem;
+    .timelineIcon {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .tc-name {
+        font-size: 1.05rem;
+    }
+
+    .tc-role {
+        font-size: 0.85rem;
+    }
 }
 
 /* ─── Accessibility: reduced motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-    .homescreenCards, .myImage {
+    .homescreenCards, .myImage, .skill-ball {
         transition: none;
+        animation: none;
     }
 }
+

@@ -1,35 +1,25 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 function CollapsibleNavBar() {
   return (
-    <Navbar style={{ zIndex: '1' }} collapseOnSelect expand="lg" variant='dark'>
-      <Container>
-        <Navbar.Brand>
-          <Link to="/mainPage">
-            <FontAwesomeIcon style={{ width: 'auto', cursor: 'pointer', color: 'whitesmoke' }} icon={faHome} size={'1x'} />
-            &nbsp;HomePage
-          </Link>
+    <Navbar sticky="top" collapseOnSelect expand="md" variant="dark" className="site-navbar">
+      <Container fluid="md">
+        <Navbar.Brand as={Link} to="/mainPage" className="navbar-brand-name">
+          <FontAwesomeIcon icon={faUser} size="sm" />&nbsp;Priyansh
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto" style={{color: '#ffffff'}}>
-            <NavDropdown className="dorpdown" title="Pages" style={{ color: '#000000' }} id="collasible-nav-dropdown">
-              <Link to="/projects"><NavDropdown.Item href="/projects">Projects</NavDropdown.Item></Link>
-              <Link to="/education"><NavDropdown.Item href="/education">Education</NavDropdown.Item></Link>
-              <Link to="/career"><NavDropdown.Item href="/career">Experience</NavDropdown.Item></Link>
-
-              <NavDropdown.Divider />
-
-              <Link to="/certifications"><NavDropdown.Item href="/certifications">Certificates</NavDropdown.Item></Link>
-              <Link to="/skills"><NavDropdown.Item href="/skills">Skills</NavDropdown.Item></Link>
-              <Link to="/awards"><NavDropdown.Item href="/awards">Awards</NavDropdown.Item></Link>
-            </NavDropdown>
+        <Navbar.Toggle aria-controls="main-nav" />
+        <Navbar.Collapse id="main-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+            <Nav.Link as={Link} to="/education">Education</Nav.Link>
+            <Nav.Link as={Link} to="/career">Career</Nav.Link>
+            <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
+            <Nav.Link as={Link} to="/awards">Awards</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
