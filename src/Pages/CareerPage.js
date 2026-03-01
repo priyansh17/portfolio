@@ -27,7 +27,7 @@ function CareerPage(props) {
         <Container>
         <PageHeader header="CareerPageHeading"/>
             
-            <Timeline position="alternate" style={{ margin: '0' }}>
+            <Timeline position="alternate" className='careerTimeline' style={{ margin: '0' }}>
                 {
                     CareerStats.map((val, ind) => {
                         return (
@@ -42,7 +42,7 @@ function CareerPage(props) {
                                 <TimelineSeparator>
                                     <TimelineConnector />
                                     <TimelineDot>
-                                        <img src={images[ind]} alt='institution icon' style={{ height: '8vw', width: '8vw', borderRadius: '8vw' }} />
+                                        <img src={images[ind]} alt='institution icon' className='timelineIcon' />
                                     </TimelineDot>
                                     <TimelineConnector />
                                 </TimelineSeparator>

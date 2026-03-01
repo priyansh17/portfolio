@@ -23,7 +23,7 @@ export default function EducationPage(props) {
     <Container>
     <PageHeader header="EducationPageHeading"/>
 
-      <Timeline position="alternate" style={{margin: '0'}}>
+      <Timeline position="alternate" className='careerTimeline' style={{margin: '0'}}>
         {
           EducationStats.map((val, ind) => {
             return (
@@ -35,7 +35,7 @@ export default function EducationPage(props) {
                   <TimelineConnector />
                   <TimelineDot>
                     {/* <SchoolSharpIcon color='primary' sx={{ fontSize: '8rem' }} /> */}
-                    <img src={images[ind]} alt='institution icon' style={{height:'10rem', width:'10rem', borderRadius: '10rem'}}/>
+                    <img src={images[ind]} alt='institution icon' className='timelineIcon'/>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>

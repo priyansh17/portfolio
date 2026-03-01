@@ -1,0 +1,31 @@
+.threebg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.threebg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: orbFloat linear infinite;
+  will-change: transform;
+}
+
+@keyframes orbFloat {
+  0%   { transform: translateY(0px) scale(1);   }
+  33%  { transform: translateY(-40px) scale(1.05); }
+  66%  { transform: translateY(20px) scale(0.95);  }
+  100% { transform: translateY(0px) scale(1);   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .threebg-orb {
+    animation: none;
+  }
+}

@@ -28,7 +28,12 @@ function CertificationsPage(props) {
         className: "center",
         infinite: true,
         swipeToSlide: true,
-        initialSlide: 0
+        initialSlide: 0,
+        slidesToShow: 3,
+        responsive: [
+            { breakpoint: 768, settings: { slidesToShow: 1 } },
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        ],
     };
 
     const internshipCerts = [dell1cert, dell2cert, hrcCert, kpmgCertificate];
@@ -40,10 +45,9 @@ function CertificationsPage(props) {
             <PageHeader header="CertificatesPageHeading" icon={faFilePdf} hasIcon={true}/>
             <Row style={{ paddingTop: "5vh", paddingBottom: "3vh" }}>
                 <p id='CertificateHeader'>Trainings</p>
-                <Slider slidesToShow={3} {...settings}>
+                <Slider {...settings}>
                     {
                         certificates["trainings"].map((val, ind) => {
-                            console.log("model added");
                             return (
                                 <CertificateSliderModel name={val['name']} pdf={trainingCerts[ind]} />
                             );
@@ -52,10 +56,9 @@ function CertificationsPage(props) {
             </Row>
             <Row style={{ paddingTop: "5vh", paddingBottom: "3vh" }}>
                 <p id='CertificateHeader'>Internships</p>
-                <Slider slidesToShow={3} {...settings}>
+                <Slider {...settings}>
                     {
                         certificates["internships"].map((val, ind) => {
-                            console.log("model added");
                             return (
                                 <CertificateSliderModel name={val['name']} pdf={internshipCerts[ind]} />
                             );
@@ -64,10 +67,9 @@ function CertificationsPage(props) {
             </Row>
             <Row style={{ paddingTop: "5vh", paddingBottom: "3vh" }}>
                 <p id='CertificateHeader'>Projects / Competitions</p>
-                <Slider slidesToShow={3} {...settings}>
+                <Slider {...settings}>
                     {
                         certificates["projects"].map((val, ind) => {
-                            console.log("model added");
                             return (
                                 <CertificateSliderModel name={val['name']} pdf={projectCerts[ind]} />
                             );
