@@ -231,13 +231,45 @@ a:link, a:visited, a:hover, a:active {
     margin: 0 0.5rem;
 }
 
+/* ─── Skill section partition ────────────────────────────────────────────── */
+.skills-section {
+    margin-bottom: 2.5rem;
+}
+
+.skills-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.skills-section-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.skills-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.skills-section-line {
+    flex: 1;
+    height: 1px;
+    min-width: 2rem;
+}
+
 /* ─── Skill balls arena ──────────────────────────────────────────────────── */
 .skills-arena {
     display: flex;
     flex-wrap: wrap;
     gap: 1.4rem;
     justify-content: center;
-    padding: 2rem 0 3rem;
+    padding: 0.5rem 0 1.5rem;
     align-items: center;
 }
 
