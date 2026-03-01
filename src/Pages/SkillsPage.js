@@ -1,101 +1,46 @@
 import React from 'react';
-import { Container, ListGroup, ListGroupItem } from 'react-bootstrap';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Container } from 'react-bootstrap';
 import SkillsData from './SkillsData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
 import PageHeader from './PageHeader';
 
+const BALL_COLORS = [
+    { bg: 'radial-gradient(circle at 35% 35%, #a78bfa, #4f46e5 60%, #1e1b4b)', glow: 'rgba(139,92,246,0.45)' },
+    { bg: 'radial-gradient(circle at 35% 35%, #c084fc, #7c3aed 60%, #2d1b69)', glow: 'rgba(192,132,252,0.45)' },
+    { bg: 'radial-gradient(circle at 35% 35%, #67e8f9, #0891b2 60%, #0c4a6e)', glow: 'rgba(6,182,212,0.45)' },
+    { bg: 'radial-gradient(circle at 35% 35%, #93c5fd, #2563eb 60%, #1e3a8a)', glow: 'rgba(59,130,246,0.45)' },
+    { bg: 'radial-gradient(circle at 35% 35%, #6ee7b7, #059669 60%, #064e3b)', glow: 'rgba(5,150,105,0.45)' },
+];
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
+const SIZES = [100, 115, 95, 120, 105];
 
-    return (
-        <div hidden={value !== index} {...other}>
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
-    );
-}
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
-
-
-function SkillsPage(props) {
-
-
-    const [value, setValue] = React.useState(2);
-
-    const handleChange = (event, newValue) => {
-        console.log(newValue);
-        setValue(newValue);
-    };
-
-    const categories = ["Technical Skills", "Soft Skills", "Programming Languages", "Scripting Languages", "Database Knowledge", "Development"];
-
-    const checkDecimal = (val) => {
-        if (parseFloat(val) % 1 !== 0) {
-            return (
-                <FontAwesomeIcon icon={faStarHalf} />
-            );
-        }
-    }
+function SkillsPage() {
+    const uniqueSkills = [...new Map(SkillsData.map(s => [s.skill, s])).values()].map(s => s.skill);
 
     return (
         <Container>
-            <PageHeader header="SkillsPageHeading"/>
-            <Box sx={{ width: '100%' }}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange} textColor="inherit" variant="scrollable">
-                        {categories.map((val, ind) => {
-                            return (
-                                <Tab key={ind} label={val} />
-                            );
-                        })}
-                    </Tabs>
-                </Box>
-                {
-                    categories.map((category, cIndex) => {
-                        return (
-                            <TabPanel key={cIndex} value={value} index={cIndex}>
-                                <ListGroup>
-                                    {
-                                        SkillsData.sort((a,b)=> b.rating-a.rating).filter(skill => skill.type === category).map((val, indexLi) => {
-                                            return (
-                                                <ListGroupItem key={indexLi} style={{ margin: '0.5vh', display: 'inline-flex', justifyContent: 'space-between' }}>
-                                                    {val['skill']}
-                                                    <div>
-                                                        {   
-                                                            [...Array(Math.floor(parseInt(val['rating'])))].map((el, i) => {
-                                                                return (
-                                                                    <FontAwesomeIcon icon={faStar} />
-                                                                );
-                                                            })
-                                                        }
-                                                        {checkDecimal(val['rating'])}
-                                                    </div>
-
-                                                </ListGroupItem>
-                                            );
-                                        })
-                                    }
-                                </ListGroup>
-                            </TabPanel>
-                        );
-                    })
-                }
-            </Box>
+            <PageHeader header="SkillsPageHeading" />
+            <div className="skills-arena">
+                {uniqueSkills.map((skill, i) => {
+                    const color = BALL_COLORS[i % BALL_COLORS.length];
+                    const size = SIZES[i % SIZES.length];
+                    return (
+                        <div
+                            key={i}
+                            className="skill-ball"
+                            style={{
+                                width: size,
+                                height: size,
+                                background: color.bg,
+                                boxShadow: `-4px -4px 8px rgba(255,255,255,0.12), 4px 4px 14px rgba(0,0,0,0.55), 0 0 28px ${color.glow}`,
+                                animationDelay: `${-(i * 0.65) % 8}s`,
+                                animationDuration: `${6 + (i % 5) * 1.2}s`,
+                            }}
+                        >
+                            <span className="skill-label">{skill}</span>
+                        </div>
+                    );
+                })}
+            </div>
         </Container>
     );
 }

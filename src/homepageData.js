@@ -10,23 +10,16 @@ const homePageData = [
     {
         "imageSrc" : "",
         "title" : "Education",
-        "text" : "This timelien depicts my roots, where I come from and what I've learned throughout my journey.",
+        "text" : "This timeline depicts my roots, where I come from and what I've learned throughout my journey.",
         "buttonText" : "See Education History",
         "link" : "/education",
     },
     {
         "imageSrc" : "",
         "title" : "Work Experience",
-        "text" : "Cluster of oppurtunities I've received till now to work with & for some reputed firms/corps.",
+        "text" : "Cluster of opportunities I've received till now to work with & for some reputed firms/corps.",
         "buttonText" : "View My Career",
         "link" : "/career",
-    },
-    {
-        "imageSrc" : "",
-        "title" : "Certifications",
-        "text" : "In case you feel I am bluffing here, these earned PDFs acts as medium to provide authenticity to all that.",
-        "buttonText" : "My Certifications",
-        "link" : "/certifications",
     },
     {
         "imageSrc" : "",

@@ -24,7 +24,6 @@ function CareerModal(props) {
             <Modal.Footer>
                 <Button onClick={toggleModal}>Close</Button>
             </Modal.Footer>
-            {console.log("Modal created")}
         </Modal>
         </div>
     );
