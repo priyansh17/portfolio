@@ -51,6 +51,16 @@ a:link, a:visited, a:hover, a:active {
     background: rgba(99, 102, 241, 0.3);
 }
 
+.site-navbar .nav-link-city {
+    background: linear-gradient(90deg, rgba(99,102,241,0.25), rgba(6,182,212,0.2));
+    border: 1px solid rgba(99,102,241,0.35);
+    margin-left: 0.4rem;
+}
+
+.site-navbar .nav-link-city:hover {
+    background: linear-gradient(90deg, rgba(99,102,241,0.5), rgba(6,182,212,0.4)) !important;
+}
+
 .navbar-brand-name {
     color: #a78bfa !important;
     font-weight: 700;

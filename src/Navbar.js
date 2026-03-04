@@ -20,6 +20,7 @@ function CollapsibleNavBar() {
             <Nav.Link as={Link} to="/career">Career</Nav.Link>
             <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
             <Nav.Link as={Link} to="/awards">Awards</Nav.Link>
+            <Nav.Link as={Link} to="/github-city" className="nav-link-city">GitHub City</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
