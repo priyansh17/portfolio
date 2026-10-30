@@ -1,5 +1,10 @@
 const awardData = [
     {
+        "award":"Azure Core Impact Award @ Microsoft",
+        "desc":"Received the FY26 Q3 Azure Core Impact Award as part of the Azure BCDR teams' recognition for helping customers establish disaster recovery outside an impacted region. The Azure Backup team accelerated Backup to Region of Choice, while the ASR team enabled large-disk replication to unblock customer migrations and support business continuity.",
+        "time":"FY26 Q3",
+    },
+    {
         "award":"Azure Core Culture Award @ Microsoft",
         "desc":"Received the Azure Core Culture Award in recognition of opening up Cross-region AKS backup & restore support to GA and delivering cross-stack impact across backend infra, CLI, and Azure SDK integration.",
         "time":"2025",

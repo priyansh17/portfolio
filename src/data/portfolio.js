@@ -4,7 +4,7 @@ import educationData from '../Pages/educationData.js';
 import awardData from '../Pages/AwardsData.js';
 import skillsData from '../Pages/SkillsData.js';
 import staticData from '../stringConst.js';
-import resume from '../media/certificates/PriyanshChoudhary_Resume_2602.pdf';
+import resume from '../media/certificates/PriyanshChoudhary_Resume_01112026.pdf';
 
 export const profile = { ...staticData, resume };
 export const experience = careerData;

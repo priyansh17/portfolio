@@ -13,6 +13,7 @@ const staticData = {
     "discord": "https://discord.gg/H3qrwyf6bP",
     "email": "mailto:im1706@gmail.com",
     "github": "https://github.com/priyansh17?tab=repositories",
+    "leetcode": "https://leetcode.com/u/Priyansh17/",
     "ProjectsPageHeading" : "My Projects",
     "EducationPageHeading" : "My Education",
     "CareerPageHeading" : "My Career",
