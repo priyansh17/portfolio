@@ -1,7 +1,18 @@
 const CareerStats = [
     {
         "corp":"Microsoft",
-        "time":"Aug 2024 - Present",
+        "time":"Aug 2026 - Present",
+        "workDone":`• Own end-to-end feature delivery and production reliability across Azure Kubernetes Service (AKS) and Azure Disk Backup, spanning design, implementation, releases, customer support, and service reliability metrics.<br/>
+• Expanded AKS backup coverage by delivering Azure Files backup and restore to vault storage with the storage team; enabled PowerShell and CLI support for Elastic SAN.<br/>
+• Designed Microsoft Entra ID authentication for private storage restores, enabling secure recovery across regions while preserving compatibility with existing customers.<br/>
+• Strengthened service security through a shared request-validation library to prevent server-side request forgery and enforcement of network isolation policies.<br/>
+• Resolved concurrency-related restore failures and improved snapshot-cleanup monitoring to detect stale resources and prevent recovery blockers.`,
+        "location":"Hyderabad, India",
+        "position":"L61 - Software Engineer II, Azure Backup"
+    },
+    {
+        "corp":"Microsoft",
+        "time":"Aug 2024 - Aug 2026",
         "workDone":`• Backend-focused engineer for Azure BCDR ensuring that customer workloads stay resilient &amp; recoverable in the face of disruptions with cloud-native solutions that are scalable &amp; operationally efficient.<br/>
 • Designed and implemented support for Direct Drive Disks to enable robust AKS backups and restores.<br/>
 • Ideated and built the Modify Protection feature and rolled out to add flexibility for existing customers to edit their protected workloads via portal, CLI and backend.<br/>

@@ -11,6 +11,10 @@ yarn.lock
 
 # production
 /build
+/dist
+/public/generated
+/playwright-report
+/test-results
 
 # misc
 .DS_Store

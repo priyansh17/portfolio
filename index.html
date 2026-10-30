@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111715" />
+    <meta name="description" content="Priyansh Choudhary's portfolio. Explore work in cloud infrastructure, resilient systems, full-stack development, and open source." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://priyanshc.com/" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Priyansh Choudhary | Software Engineer" />
+    <meta property="og:description" content="Building systems. Making an impact. Cloud infrastructure, software engineering, and selected projects." />
+    <meta property="og:url" content="https://priyanshc.com/" />
+    <meta property="og:image" content="https://priyanshc.com/generated/social.png" />
+    <meta property="og:image:alt" content="Priyansh Choudhary - software engineering portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Priyansh Choudhary | Software Engineer</title>
+    <script>
+      try {
+        const theme = localStorage.getItem('portfolio-theme');
+        document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+          ? theme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>Priyansh Choudhary</h1>
+        <p>Software engineer working on cloud infrastructure and resilient systems.</p>
+        <p>Enable JavaScript to explore the interactive portfolio, or <a href="mailto:im1706@gmail.com">get in touch by email</a>.</p>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
